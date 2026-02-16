@@ -96,5 +96,6 @@ async def weekly(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.effective_user.id != ADMIN_ID:
         return
 
-    cursor.execute("SELECT username, points FROM users ORDER BY points DESC L
+    cursor.execute("SELECT username, points FROM users ORDER BY points DESC LIMIT 10")
+
 
